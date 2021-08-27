@@ -7,7 +7,7 @@ import { render } from '@testing-library/react';
 import App from './App';
 
 test('App renders target', () => {
-	const { getByRole } = render(<App/>);
+	const component = render(<App/>).getByRole('target');
 
-	expect(getByRole('target')).toBeInTheDocument();
+	expect(component).toBeInTheDocument();
 });
